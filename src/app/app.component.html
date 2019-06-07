@@ -1,0 +1,72 @@
+<div class="container-fluid">
+  <header>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 fixed-top">
+      <img src="../assets/pictures/Logo2.jpg " class="my-0 mr-md-auto font-weight-normal">
+      <!-- <h5 class="my-0 mr-md-auto font-weight-normal">Company name</h5> -->
+      <nav class=" navbar-expand-md ">
+
+        <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="material-icons">
+            list
+          </i>
+        </button>
+
+        <div class="collapse navbar-collapse mr-md-auto" id="navbarTogglerDemo02">
+
+          <a class="nav-link active" routerLink="/" class="hp">Home</a>
+          <a class="nav-link" [routerLink]="'/product-list'" class="hp">Products</a>
+          <a class="nav-link" [routerLink]="'/user-page'" class="hp">My Page</a>
+
+          <button class="user"><a class="nav-link" id="user" [routerLink]="'/login'">Log In</a></button>
+          <button class="user2"><a class="nav-link " id="user2" [routerLink]="'/registration'">Creat
+              Account</a></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+
+  <div class="row justify-content-center">
+    <div class="col-9">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+
+  <footer>
+    <div class="row-foot">
+      <div class="col-4">
+        <div class="foot-box">
+          <h5>Company Info</h5>
+        </div>
+        <p>About Us</p>
+        <p>Blog</p>
+        <p>Contact Us</p>
+        <p>Shipping & Returns</p>
+      </div>
+      <div class="col-4">
+        <div class="foot-box">
+          <h5>My Account</h5>
+        </div>
+        <p>My account</p>
+        <p>Sign Up</p>
+        <p>Order Status</p>
+        <p>View Cart</p>
+      </div>
+      <div class="col-4">
+        <h5 id="social">Get in Touch With us </h5>
+        <img src="https://img.icons8.com/color/48/000000/instagram-new.png">
+        <img src="https://img.icons8.com/color/48/000000/facebook.png">
+        <img src="https://img.icons8.com/color/48/000000/vk-com.png">
+        <img src="https://img.icons8.com/color/48/000000/twitter-squared.png">
+        <div class="email">
+          <img src="https://img.icons8.com/color/48/000000/secured-letter.png" id="letter">
+          <span id="ket">:</span>
+          <span id="email">Our_email.@gmail.com</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>

@@ -1,0 +1,56 @@
+<h1 style="text-align:center">Registration Page</h1>
+<hr>
+<div class="container">
+
+  <!-- <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="text" class="form-control" formControlName="email" id="email">
+      <p *ngIf="form.get('email').invalid && form.get('email').touched">Enter correct Email</p>
+    </div>
+    <div class="form-group">
+      <label for="pass">Password</label>
+      <input type="password" class="form-control" formControlName="password" id="pass">
+      <p *ngIf="form.get('password').invalid && form.get('password').touched">
+        <span *ngIf="form.get('password').errors['required']">Enter password</span>
+        <span *ngIf="form.get('password').errors['passError']">Enter password + {{charsCount}} symbol</span>
+      </p>
+    </div>
+    <button type="submit" class="btn btn-success" [disabled]="form.invalid">Submit</button>
+    </form> -->
+
+
+
+
+  <div class="row">
+    <div class="col">
+      <div class="card ">
+        <div class="card-header text-center">
+          <h4> Enter your details </h4>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="text" class="form-control" formControlName="email" id="email" placeholder="Enter your Email">
+              <p *ngIf="form.get('email').invalid && form.get('email').touched">Enter correct Email</p>
+            </div>
+            <div class="form-group">
+              <label for="pass">Password</label>
+              <input type="password" class="form-control" formControlName="password" id="pass"
+                placeholder="Enter your password">
+              <p *ngIf="form.get('password').invalid && form.get('password').touched">
+                <span *ngIf="form.get('password').errors['required']">Enter password</span>
+                <span *ngIf="form.get('password').errors['passError']">Enter password + {{charsCount}} symbol</span>
+              </p>
+            </div>
+            <div class="card-footer text-right">
+              <button type="submit" class="btn btn-success" [disabled]="form.invalid">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

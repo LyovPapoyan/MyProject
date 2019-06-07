@@ -1,0 +1,71 @@
+<h2>Products list</h2>
+<hr> <br>
+<!-- 
+<span class="status">All {{productList.length}}</span>
+<mat-form-field class="example-full-width" [(ngModel)]="selectval">
+  <mat-select placeholder="Status">
+    <mat-option *ngFor="let stat of status" [value]="stat">{{stat}}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<button class="btn" routerLink="/user-page"><b>Add New Product</b></button>
+<hr>
+<div class="container" *ngFor="let product of productList; let i = index" [ngClass]="{active: statusConditions[i]}">
+  <div class="prod">
+    <h4>{{product.name}}</h4>
+    <span>{{product.description}}</span>
+  </div>
+  <div class="icon">
+    <i class="material-icons" id="edit" (click)="edit(product)">
+      edit
+    </i>
+    <i class="material-icons" id="del" (click)="delete(product)">
+      delete
+    </i>
+  </div>
+</div>
+ -->
+
+
+
+
+<div class="add d-flex  align-items-center">
+  <div class="col-sm-8 col-xs-12">
+    <span class="status">All {{productList.length}}</span>
+    <mat-form-field class="example-full-width" >
+      <mat-select placeholder="Status">
+        <mat-option *ngFor="let stat of status" [value]="stat">{{stat}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="col-sm-4 col-xs-12">
+    <button class="btn btn-outline-primary float-right " routerLink="/user-page"><b>Add New Product</b></button>
+  </div>
+</div>
+<hr>
+
+
+<div class="row " *ngFor="let product of productList; let i = index">
+  <div class="border-left-inactive" *ngIf="statusConditions[i]"><span class="act">Inactive</span></div>
+  <div class="border-left-active" *ngIf="!statusConditions[i]"><span class="act">Active</span></div>
+  <div class=" col-sm-10 col-xs-12">
+    <h4>{{product.name}}</h4>
+    <span>{{product.description}}</span>
+  </div>
+
+  
+
+  <div class="col-sm-2 col-xs-12 justify-content-end align-items-end">
+
+    <div class="edit">
+      <i class="material-icons" title="Edit" id="edit" (click)="edit(product)">
+        edit
+      </i>
+    </div>
+    <div class="del">
+      <i class="material-icons " title="Delete"  id="del" (click)="delete(product)">
+        delete
+      </i>
+    </div>
+  </div>
+</div>

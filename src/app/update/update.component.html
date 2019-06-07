@@ -1,0 +1,67 @@
+<h2>Update Product</h2>
+<hr>
+<div class="row">
+  <div class="col-xl">
+    <img src="../../assets/pictures/collection2.jpg">
+  </div>
+  <div class="col-xl col-lg-12">
+    <div class="card">
+      <div class="card-header text-center">
+        <h5>Product Name</h5>
+      </div>
+      <div class="card-body">
+        <h6 class="card-title text-center">Description</h6>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati consequatur, blanditiis
+          et doloribus iste
+          sint temporibus laboriosam repudiandae eaque molestias neque sequi harum aliquam tenetur dolorum minus velit
+          distinctio? Odit. Quam corporis quis repellendus illo unde nobis dignissimos voluptas suscipit expedita.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+<br><br>
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value, logedUser)">
+
+  <div class="form-group" >
+
+    <mat-form-field class="example-full-width2">
+      <input type="text" matInput placeholder="Product Name" formControlName="name">
+    </mat-form-field>
+    <p *ngIf="form.get('name').invalid && form.get('name').touched">Enter Name </p>
+  </div>
+  <hr>
+  <div class="form-group">
+    <mat-form-field class="example-full-width">
+      <input type="text" matInput placeholder="Product Description" formControlName="description">
+    </mat-form-field>
+    <p *ngIf="form.get('description').invalid && form.get('description').touched">Enter Description </p>
+  </div>
+  <hr>
+
+  <div class="form-group" id="price">
+    <table class="example-full-width table-responsive-md" cellspacing="3">
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width2">
+            <mat-select placeholder="Status" formControlName="status">
+              <mat-option>None</mat-option>
+              <mat-option *ngFor="let stat of status" [value]="stat">{{stat}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <p *ngIf="form.get('status').invalid && form.get('status').touched">Enter Status </p>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+           <input type="number" matInput placeholder="Priced By Coins" formControlName="price">
+          </mat-form-field>
+          <p *ngIf="form.get('price').invalid && form.get('price').touched">Enter Price </p>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="btn" [disabled]="form.invalid"><b>Save New Product</b></button>
+
+</form>
