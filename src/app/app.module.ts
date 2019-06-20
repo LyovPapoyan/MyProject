@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { UserPageComponent } from './user-page/user-page.component';
 import { UpdateComponent } from './update/update.component';
+import { HttpService } from './http.service';
 
 
 @NgModule({
@@ -34,7 +35,7 @@ import { UpdateComponent } from './update/update.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

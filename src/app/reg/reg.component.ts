@@ -9,8 +9,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-reg',
   templateUrl: './reg.component.html',
-  styleUrls: ['./reg.component.css'],
-  providers: [HttpService]
+  styleUrls: ['./reg.component.css']
 })
 export class RegComponent implements OnInit {
 

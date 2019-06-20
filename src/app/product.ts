@@ -7,6 +7,6 @@ export class Product {
 }
 
 export let selectedProduct = {
-    selectId: 0
+    selectId: 0 
 };
 

@@ -45,15 +45,13 @@
 <hr>
 
 
-<div class="row " *ngFor="let product of productList; let i = index">
-  <div class="border-left-inactive" *ngIf="statusConditions[i]"><span class="act">Inactive</span></div>
-  <div class="border-left-active" *ngIf="!statusConditions[i]"><span class="act">Active</span></div>
+<div class="row " *ngFor="let product of productList ; let i = index">
+  <div class="border-left-inactive" *ngIf="!statusConditions[i]"><span class="act">Inactive</span></div>
+  <div class="border-left-active" *ngIf="statusConditions[i]"><span class="act">Active</span></div>
   <div class=" col-sm-10 col-xs-12">
     <h4>{{product.name}}</h4>
     <span>{{product.description}}</span>
   </div>
-
-  
 
   <div class="col-sm-2 col-xs-12 justify-content-end align-items-end">
 

@@ -8,8 +8,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-user-page',
   templateUrl: './user-page.component.html',
-  styleUrls: ['./user-page.component.css'],
-  providers: [HttpService]
+  styleUrls: ['./user-page.component.css']
 })
 export class UserPageComponent implements OnInit {
   status: string[] = ['Active', 'Inactive'];

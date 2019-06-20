@@ -8,8 +8,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-update',
   templateUrl: './update.component.html',
-  styleUrls: ['./update.component.css'],
-  providers: [HttpService]
+  styleUrls: ['./update.component.css']
 })
 export class UpdateComponent implements OnInit {
 
@@ -35,15 +34,17 @@ export class UpdateComponent implements OnInit {
       price: new FormControl('', [Validators.required])
     });
   }
-
   onSubmit(myproduct: Product, selectedId) {
-    console.log(selectedId);
     console.log(myproduct);
+    console.log(selectedId);
     this.httpservice.postUpdate(myproduct, selectedId).subscribe((data) => {
-      
        alert('Product Update');
-      console.log(data); 
+      // console.log(data); });
      this.route.navigateByUrl('/product-list');
+     
   });
+  
 }
+
+
 }
